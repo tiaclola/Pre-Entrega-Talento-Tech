@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+	<title>Productos</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			font-family: "roboto", sans-serif;
+            background-color: #f2f4f3;
+			margin: 0;
+			padding: 0;
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+		}
+		#container {
+			width: 100%;
+			max-width: 700px;
+			margin: 0 auto; 
+			border-radius: 10px;
+			flex: 1; 
+		}
+		#cabecera {
+			height: auto;
+			width: 100%;
+            border-radius: 10px;
+		}
+		#cabecera img {
+				width: 100%;
+				height: auto;
+        	}
+		#menu {
+			display: flex;
+			height: 50px;
+			background-color: #f4f894;
+			border-radius: 10px;
+			margin-top: 0.5rem;
+			justify-content: center;
+		}
+		#menu div {
+			flex: 1;
+			text-align: center;
+			line-height: 50px;
+		}
+		#cajon {
+			background-color: #fcfbfb;
+			height: auto;
+			width: 700px;
+			margin-top: 1rem;
+			margin-right: auto;
+			margin-bottom: 1rem;
+			margin-left: auto;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+		}
+		.productos {
+			list-style-type: none; 
+			column-count: 4; 
+			column-gap: 20px; 
+			padding: 0;
+			margin: 0;
+		}
+		.productos li {
+    		margin-bottom: 10px; 
+		}
+        section {
+			grid-area: productos;
+			text-align: center;
+			.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+        		a {
+            		text-decoration: none;
+
+            		img {
+                		border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+						margin-top: 1rem;
+                		.item {
+							width: 200px;
+							height: 200px;
+            			}
+            		}
+        		}
+    		}
+		}
+		a:link, a:visited, a:hover, a:active {
+			color: #000;
+			text-decoration: none;
+		}
+		a:hover, a:active {
+			color: fuchsia;
+		}
+		#reseñas {
+			background-color: #f4f894;
+			border-radius: 10px;
+			padding: 15px;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			width: 700PX;
+			font-family: Arial, sans-serif;
+		}
+
+		#reseñas h3 {
+			text-align: center;
+			color: #333333;
+		}
+
+		.reseña {
+			margin-bottom: 15px;
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.reseña p {
+			margin: 5px 0;
+		}
+
+		.reseña strong {
+			font-size: 1.1em;
+			color: #555;
+		}
+		#pie {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 10px;
+			text-align: center;
+			background-color: #f6c7ea;
+			border-radius: 10px;
+			padding: 10px 0;
+			margin-top: 1rem;
+			margin: 0 auto;
+			max-width: 700px;
+            width: 100%;
+		}
+		@media (max-width: 600px) {
+        	#container {
+				max-width: 100%;
+				padding: 0 1rem;
+        	}
+        	#cajon {
+				width: 100%;
+				margin: 0 auto;
+        	}
+        	#menu {
+				flex-direction: column;
+				height: auto;
+        	}
+        	#menu div {
+				line-height: 30px;
+				font-size: 14px;
+        	}
+        	#caja {
+				width: 100%;
+				height: auto;
+        	}
+        	#pie {
+				font-size: 12px;
+				padding: 1rem;
+        	}
+    	}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="cabecera"> 
+			<img src="./assets/Logo TiaClola Artesanias 700x180.jpg" width="700" height="180" />
+		</div>
+		<div id="menu">
+			<div id="boton1"><a href="index.html">Inicio</a></div>
+			<div id="boton2"><a href="hojalaempresa.html">La Empresa</a></div>
+			<div id="boton3"><a href="hojaproductos.html">Productos</a></div>
+			<div id="boton4"><a href="hojacontacto.html">Contacto</a></div>
+		</div>
+	</div>
+	<div id="cajon">
+            <section>
+                <h3 Seccion de Productos></h3>
+                <div class="container">
+                    <div class="card">
+                        <a href="./pages/producto.html">
+                            <img src="./assets/alhajero .jpg">
+                            <div class="item">
+                                <h3>Alhajero</h3>
+                            	<p>$ 15000</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="">
+                            <img src="./assets/bandeja de madera.jpg">
+                            <div class="item">
+                                <h3>Bandeja de madera</h3>
+                                <p>$ 5000</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="">
+                            <img src="./assets/bowl.jpg">
+                            <div class="item">
+                                <h3>Bowl</h3>
+                                <p>$ 5000</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="">
+                            <img src="./assets/taza.jpg">
+                            <div class="item">
+                                <h3>Taza</h3>
+                                <p>$ 5000</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+	</div>
+	<div id="reseñas">
+			<h3>Reseñas de Clientes</h3>
+			<div class="reseña">
+				<p><strong>Juan Pérez</strong></p>
+				<p>⭐⭐⭐⭐⭐</p>
+				<p>"Excelente calidad, el producto llegó en perfectas condiciones y es tal como lo esperaba. ¡Muy recomendado!"</p>
+			</div>
+			<div class="reseña">
+				<p><strong>María López</strong></p>
+				<p>⭐⭐⭐⭐</p>
+				<p>"Muy buen producto, aunque el envío tomó un poco más de lo esperado."</p>
+			</div>
+			<div class="reseña">
+				<p><strong>Pedro Gómez</strong></p>
+				<p>⭐⭐⭐⭐⭐</p>
+				<p>"Hermoso diseño y excelente atención al cliente. Sin duda compraré de nuevo."</p>
+			</div>
+		
+	</div>
+	<footer id="pie">
+		<p>Diseño: Claudia Blandamura ©2024 Tiaclola. Todos los derechos reservados</p>
+		<div id="diseñador">
+			<a href="https://tiaclola.blogspot.com/" target="_blank">Blog: Tiaclola</a>
+		</div>
+	</footer>
+</body>
+</html>
