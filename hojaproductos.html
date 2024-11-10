@@ -52,7 +52,8 @@
 		#cajon {
 			background-color: #fcfbfb;
 			height: auto;
-			width: 700px;
+			width: 100%;
+			max-width: 700px;
 			margin-top: 1rem;
 			margin-right: auto;
 			margin-bottom: 1rem;
@@ -74,23 +75,22 @@
         section {
 			grid-area: productos;
 			text-align: center;
-			.container {
+		}
+		.container {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
-        		a {
-            		text-decoration: none;
-
-            		img {
-                		border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-						margin-top: 1rem;
-                		.item {
-							width: 200px;
-							height: 200px;
-            			}
-            		}
-        		}
-    		}
+		}
+		.card {
+			flex-basis: 200px;
+			margin: 1rem;
+			text-align: center;
+		}
+		.card img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			margin-bottom: 0.5rem;
 		}
 		a:link, a:visited, a:hover, a:active {
 			color: #000;
@@ -101,12 +101,16 @@
 		}
 		#reseñas {
 			background-color: #f4f894;
-			border-radius: 10px;
 			padding: 15px;
 			margin-top: 1rem;
+			margin-right: auto;
 			margin-bottom: 1rem;
-			width: 700PX;
+			margin-left: auto;
 			font-family: Arial, sans-serif;
+			font-size: 15px;
+			border-radius: 10px;
+			width: 100%;
+			max-width: 700px;
 		}
 
 		#reseñas h3 {
@@ -128,6 +132,7 @@
 			font-size: 1.1em;
 			color: #555;
 		}
+
 		#pie {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 10px;
@@ -141,13 +146,9 @@
             width: 100%;
 		}
 		@media (max-width: 600px) {
-        	#container {
+        	#container, #cajon, #reseñas, #pie {
 				max-width: 100%;
 				padding: 0 1rem;
-        	}
-        	#cajon {
-				width: 100%;
-				margin: 0 auto;
         	}
         	#menu {
 				flex-direction: column;
@@ -157,9 +158,17 @@
 				line-height: 30px;
 				font-size: 14px;
         	}
-        	#caja {
+        	.container {
+				flex-direction: column;
+				align-items: center;
+        	}
+        	.card {
 				width: 100%;
-				height: auto;
+				max-width: 300px;
+        	}
+        	.reseña {
+				padding: 1rem;
+				font-size: 14px;
         	}
         	#pie {
 				font-size: 12px;
@@ -171,7 +180,7 @@
 <body>
 	<div id="container">
 		<div id="cabecera"> 
-			<img src="./assets/Logo TiaClola Artesanias 700x180.jpg" width="700" height="180" />
+			<img src="./assets/Logo TiaClola Artesanias 700x180.jpg" alt="Logo de TiaClola" />
 		</div>
 		<div id="menu">
 			<div id="boton1"><a href="index.html">Inicio</a></div>
@@ -182,11 +191,11 @@
 	</div>
 	<div id="cajon">
             <section>
-                <h3 Seccion de Productos></h3>
+                <h3>Sección de Productos</h3>
                 <div class="container">
                     <div class="card">
-                        <a href="./pages/producto.html">
-                            <img src="./assets/alhajero .jpg">
+                        <a href="">
+                            <img src="./assets/alhajero .jpg" alt="Alhajero">
                             <div class="item">
                                 <h3>Alhajero</h3>
                             	<p>$ 15000</p>
@@ -194,8 +203,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="">
-                            <img src="./assets/bandeja de madera.jpg">
+                        <a href="#">
+                            <img src="./assets/bandeja de madera.jpg" alt="Bandeja de madera">
                             <div class="item">
                                 <h3>Bandeja de madera</h3>
                                 <p>$ 5000</p>
@@ -203,8 +212,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="">
-                            <img src="./assets/bowl.jpg">
+                        <a href="#">
+                            <img src="./assets/bowl.jpg" alt="Bowl">
                             <div class="item">
                                 <h3>Bowl</h3>
                                 <p>$ 5000</p>
@@ -212,8 +221,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="">
-                            <img src="./assets/taza.jpg">
+                        <a href="#">
+                            <img src="./assets/taza.jpg" alt="Taza">
                             <div class="item">
                                 <h3>Taza</h3>
                                 <p>$ 5000</p>
@@ -240,7 +249,6 @@
 				<p>⭐⭐⭐⭐⭐</p>
 				<p>"Hermoso diseño y excelente atención al cliente. Sin duda compraré de nuevo."</p>
 			</div>
-		
 	</div>
 	<footer id="pie">
 		<p>Diseño: Claudia Blandamura ©2024 Tiaclola. Todos los derechos reservados</p>
